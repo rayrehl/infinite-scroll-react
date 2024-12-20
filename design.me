@@ -1,0 +1,12 @@
+# Information About Design
+
+## Home Page
+
+- Rather than placing a **button** for each movie, the user is able to click the movie item itself.
+
+
+- To improve performance, I cache all the chracter data, because
+  * There is no api endpoint for fetching quotes populated with the character information
+  * The chracter data is not changed frequently
+  * We can avoid api rate limiting, because we fetch all character at once.
+  * Rather than caching, we can use Redux for state management to store characters.
