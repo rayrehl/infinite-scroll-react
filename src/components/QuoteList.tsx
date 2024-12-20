@@ -59,9 +59,9 @@ const QuoteList: React.FC<Props> = ({ movie }) => {
             const characterName = character?.name ?? 'Unknown';
 
             return (
-              <div key={quote._id}>
-                <div>{characterName}</div>
-                <div>{quote.dialog}</div>
+              <div key={quote._id} style={{ textAlign: 'left' }}>
+                <span style={{ fontWeight: 'bold' }}>{characterName}</span>:{' '}
+                {quote.dialog}
               </div>
             );
           })}
