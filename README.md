@@ -1,37 +1,80 @@
-# Vite + React + Typescript + Eslint + Prettier
+# Lord of the Rings Quotes App
 
-A starter for React with Typescript with the fast Vite and all static code testing with Eslint and formatting with Prettier.
-
-![Vite + React + Typescript + Eslint + Prettier](/resources/screenshot.png)
-
-I found out about Vite and I wanted to have a boilerplate for the technologies that I use. You can find more about these in the following links: [Vite](https://github.com/vitejs/vite), [React](https://reactjs.org/), [Typescript](https://www.typescriptlang.org/), [Eslint](https://eslint.org/), [Prettier](https://prettier.io/).
+This is a React TypeScript app that displays a list of movies from the Lord of the Rings trilogy, and allows the user to view quotes from each movie.
 
 ## Installation
 
-Clone the repo and run `yarn install`
+To install this app, clone the repository to your local machine and install the dependencies using Yarn or NPM:
 
-or Run command
+```bash
+git clone https://github.com/raymondkdev/lord-of-rings-react-ts.git
+cd lord-of-rings-react-ts
+yarn install
+```
+
+## Usage
+
+To start the app, run the following command:
+
+```bash
+yarn dev
+```
+
+This will start the development server and open the app in your default browser.
+
+## Features
+
+- View a list of movies from the Lord of the Rings trilogy.
+- View quotes from each movie.
+- Infinite scrolling of quotes.
+- Caching of character data for improved performance.
+
+## Folder Structure
 
 ```
-npx degit TheSwordBreaker/vite-reactts-eslint-prettier project-name
+src/
+├── components/
+│ ├── MovieDetails.tsx
+│ ├── MovieList.tsx
+│ ├── MovieListItem.tsx
+│ ├── QuoteList.tsx
+│ ├── NotFound.tsx
+│ └── ...
+├── models/
+│ ├── Character.ts
+│ ├── Movie.ts
+│ └── Quote.ts
+├── pages/
+│ ├── Home/
+│ │ └── index.tsx
+│ └── Movie/
+│   └── [id].tsx
+├── routers/
+│ └── index.tsx
+├── services/
+│ └── LordOfRingsAPI.ts
+├── types/
+├── utils/
+├── App.css
+├── App.tsx
+├── index.css
+├── main.tsx
+└── ...
 ```
 
-## Start
+## Dependencies
 
-After the successfull installation of the packages: `yarn dev`
+- React
+- TypeScript
+- Vite
+- Axios
+- React Router DOM v6
+- React Infinite Scroller
 
-## Steps in Vscode
+## API Reference
 
-#### (works with better with this template)
+This app uses the [Lord of the Rings API](https://the-one-api.dev/) to fetch data.
 
-1. Install Eslint and prettier extension for vs code.
-2. Make Sure Both are enabled
-3. Make sure all packages are Installed. (Mostly Eslint and prettier in node_modules)
-4. Enable formatOnSave of vs code
-5. Open a .tsx file and check if the bottom right corners of vs code have Eslint and Prettier with a double tick
+## License
 
-![Screenshot (253)_LI](https://user-images.githubusercontent.com/52120562/162486286-7383a737-d555-4f9b-a4dd-c4a81deb7b96.jpg)
-
-If Everything is Good Then It Should Work, but let me new if something else happens
-
-Made with ❤️ by theSwordBreaker(we Destory all types of sword ⚡)
+This project is licensed under the [MIT License](LICENSE).
